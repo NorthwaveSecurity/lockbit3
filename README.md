@@ -1,4 +1,5 @@
 This repo contains a few scripts that were used in the analysis of Lockbit 3.0.
+A full description of the config and what it looks like can be found on our blog here: https://northwave-security.com/lockbit3-0/
 
 **string_decrypt.py**: Setting the `FUNC` variable to the string decryption routine's address will let you decrypt around 95% of the strings.
 
