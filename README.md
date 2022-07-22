@@ -1,6 +1,8 @@
 This repo contains a few scripts that were used in the analysis of Lockbit 3.0.
 A full description of the config and what it looks like can be found on our blog here: https://northwave-security.com/lockbit3-0/
 
+# Contents 
+
 **string_decrypt.py**: Setting the `FUNC` variable to the string decryption routine's address will let you decrypt around 95% of the strings.
 
 **api_resolve.py**: This is an x64dbg python script to be used with the x64dbg python extension. After unpacking, lockbit initializes its own custom IAT. But, rather than using direct pointers to APIs, it uses small thunk functions that "decrypt" the pointer to the API. These pointers to thunk functions are all located sequentially in the data segment. After lockbit has initialized all of the thunk functions, you can use this script to execute all the thunks and get the API names belonging to them. Set the START and END variables to the start and end of the custom IAT.
